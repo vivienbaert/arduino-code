@@ -7,16 +7,16 @@ const int leftButton = 4;
 const int rightButton = 5;
 
 
-void setup() { 
+void setup() {
   pinMode(upButton, INPUT);
   pinMode(downButton, INPUT);
   pinMode(leftButton, INPUT);
   pinMode(rightButton, INPUT);
 
-  
+
   Serial.begin(9600);
 }
-void loop() 
+void loop()
 {
   if (digitalRead(upButton) == HIGH) {
     Keyboard.write('z');
@@ -38,5 +38,4 @@ void loop()
     delay(500);
     Keyboard.release('d');
   }
-
 }
